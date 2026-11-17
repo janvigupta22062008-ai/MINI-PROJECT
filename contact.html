@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBank - Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🏦 SmartBank</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="emi.html">Loan EMI</a>
+      <a href="fd.html">FD Calculator</a>
+      <a href="goal.html">Savings Goal</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <section class="banner contact-bg">
+    <h1>About &amp; Contact</h1>
+    <p>We would love to hear your feedback</p>
+  </section>
+
+  <section class="features">
+    <div class="feature orange">
+      <div class="icon">📧</div>
+      <h3>Email</h3>
+      <p>support@smartbank.example</p>
+    </div>
+    <div class="feature green">
+      <div class="icon">📍</div>
+      <h3>Location</h3>
+      <p>Meerut, Uttar Pradesh, India</p>
+    </div>
+    <div class="feature pink">
+      <div class="icon">💡</div>
+      <h3>About</h3>
+      <p>A college mini project built with HTML, CSS and JavaScript.</p>
+    </div>
+  </section>
+
+  <div class="box">
+    <h2 class="form-title">Send us a message</h2>
+
+    <label>Your Name</label>
+    <input type="text" id="cName" placeholder="Enter your name">
+
+    <label>Your Email</label>
+    <input type="email" id="cEmail" placeholder="Enter your email">
+
+    <label>Message</label>
+    <textarea id="cMessage" rows="4" placeholder="Write your message here"></textarea>
+
+    <button class="btn" onclick="sendMessage()">Send Message</button>
+    <div id="contactResult" class="result"></div>
+  </div>
+
+  <footer>&copy; 2026 SmartBank Toolkit | Mini Project made with HTML, CSS &amp; JavaScript</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

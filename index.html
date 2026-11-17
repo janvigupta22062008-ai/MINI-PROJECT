@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBank</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LEFT MENU -->
+  <nav class="navbar">
+    <div class="logo">🏦 SmartBank</div>
+    <div class="links">
+      <a href="#home">Home</a>
+      <a href="#emi">Loan EMI</a>
+      <a href="#fd">FD Calculator</a>
+      <a href="#goal">Savings Goal</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <section id="home">
+    <div class="hero">
+      <h1>Plan Your Money. Reach Your Dreams. 🚀</h1>
+      <p>Free tools to calculate loans, grow deposits and hit your savings goals.</p>
+      <a href="#emi" class="hero-btn">Start Planning</a>
+    </div>
+
+    <div class="features">
+      <a href="#emi" class="feature orange">
+        <div class="icon">💳</div>
+        <h3>Loan EMI Calculator</h3>
+        <p>Know your monthly payment and total interest before you borrow.</p>
+      </a>
+      <a href="#fd" class="feature green">
+        <div class="icon">📈</div>
+        <h3>FD Calculator</h3>
+        <p>See how much your fixed deposit will grow by maturity.</p>
+      </a>
+      <a href="#goal" class="feature pink">
+        <div class="icon">🎯</div>
+        <h3>Savings Goal Planner</h3>
+        <p>Find out exactly when you will afford that laptop, bike or trip.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- LOAN EMI -->
+  <section id="emi">
+    <div class="banner emi-bg">
+      <h1>💳 Loan EMI Calculator</h1>
+      <p>Find your monthly payment before you borrow</p>
+    </div>
+
+    <div class="box">
+      <label>Loan Amount (₹)</label>
+      <input type="number" id="loanAmount" placeholder="e.g. 500000">
+
+      <label>Interest Rate (% per year)</label>
+      <input type="number" id="loanRate" placeholder="e.g. 9">
+
+      <label>Duration (years)</label>
+      <input type="number" id="loanYears" placeholder="e.g. 5">
+
+      <button class="btn" onclick="calculateEMI()">Calculate EMI</button>
+      <div id="emiResult" class="result"></div>
+    </div>
+  </section>
+
+  <!-- FIXED DEPOSIT -->
+  <section id="fd">
+    <div class="banner fd-bg">
+      <h1>📈 Fixed Deposit Calculator</h1>
+      <p>Watch your money grow with compound interest</p>
+    </div>
+
+    <div class="box">
+      <label>Deposit Amount (₹)</label>
+      <input type="number" id="fdAmount" placeholder="e.g. 100000">
+
+      <label>Interest Rate (% per year)</label>
+      <input type="number" id="fdRate" placeholder="e.g. 7">
+
+      <label>Duration (years)</label>
+      <input type="number" id="fdYears" placeholder="e.g. 3">
+
+      <button class="btn" onclick="calculateFD()">Calculate Maturity</button>
+      <div id="fdResult" class="result"></div>
+    </div>
+  </section>
+
+  <!-- SAVINGS GOAL -->
+  <section id="goal">
+    <div class="banner goal-bg">
+      <h1>🎯 Savings Goal Planner</h1>
+      <p>Find out exactly when you can afford what you want</p>
+    </div>
+
+    <div class="box">
+      <label>What are you saving for?</label>
+      <input type="text" id="goalName" placeholder="e.g. New laptop">
+
+      <label>Target Amount (₹)</label>
+      <input type="number" id="goalTarget" placeholder="e.g. 60000">
+
+      <label>Already Saved (₹)</label>
+      <input type="number" id="goalSaved" placeholder="e.g. 10000">
+
+      <label>You can save per month (₹)</label>
+      <input type="number" id="goalMonthly" placeholder="e.g. 2500">
+
+      <button class="btn" onclick="calculateGoal()">Plan My Goal</button>
+      <div id="goalResult" class="result"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="banner contact-bg">
+      <h1>📞 About &amp; Contact</h1>
+      <p>We would love to hear your feedback</p>
+    </div>
+
+    <div class="features">
+      <div class="feature orange">
+        <div class="icon">📧</div>
+        <h3>Email</h3>
+        <p>support@smartbank.example</p>
+      </div>
+      <div class="feature green">
+        <div class="icon">📍</div>
+        <h3>Location</h3>
+        <p>Meerut, Uttar Pradesh, India</p>
+      </div>
+      <div class="feature pink">
+        <div class="icon">💡</div>
+        <h3>About</h3>
+        <p>A college mini project built with HTML, CSS and JavaScript.</p>
+      </div>
+    </div>
+
+    <div class="box">
+      <h2 class="form-title">Send us a message</h2>
+
+      <label>Your Name</label>
+      <input type="text" id="cName" placeholder="Enter your name">
+
+      <label>Your Email</label>
+      <input type="email" id="cEmail" placeholder="Enter your email">
+
+      <label>Message</label>
+      <textarea id="cMessage" rows="4" placeholder="Write your message here"></textarea>
+
+      <button class="btn" onclick="sendMessage()">Send Message</button>
+      <div id="contactResult" class="result"></div>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 SmartBank Toolkit | Mini Project made with HTML, CSS &amp; JavaScript</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

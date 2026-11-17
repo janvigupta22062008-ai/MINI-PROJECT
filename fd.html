@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartBank - FD Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">🏦 SmartBank</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="emi.html">Loan EMI</a>
+      <a href="fd.html" class="active">FD Calculator</a>
+      <a href="goal.html">Savings Goal</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <section class="banner fd-bg">
+    <h1>📈 Fixed Deposit Calculator</h1>
+    <p>Watch your money grow with compound interest</p>
+  </section>
+
+  <div class="box">
+    <label>Deposit Amount (₹)</label>
+    <input type="number" id="fdAmount" placeholder="e.g. 100000">
+
+    <label>Interest Rate (% per year)</label>
+    <input type="number" id="fdRate" placeholder="e.g. 7">
+
+    <label>Duration (years)</label>
+    <input type="number" id="fdYears" placeholder="e.g. 3">
+
+    <button class="btn" onclick="calculateFD()">Calculate Maturity</button>
+    <div id="fdResult" class="result"></div>
+  </div>
+
+  <footer>&copy; 2026 SmartBank Toolkit | Mini Project made with HTML, CSS &amp; JavaScript</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
